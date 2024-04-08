@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'course 1.dart';
-import 'course 2.dart';
-import '../course navigator/course 1.dart';
-import '../course navigator/course 2.dart';
+import 'list_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,12 +9,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      initialRoute: '/',
-      routes: {
-        '/': (context) => ScreenOne(),
-        '/second': (context) => ScreenTwo(),
-      },
+      title: 'Course Navigator',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: CoursesListScreen(
+        courses: [
+          Course(code: 'IT101', title: 'Introduction to IT'),
+          Course(code: 'CS102', title: 'Computer Science Fundamentals'),
+          // Add more courses here
+        ],
+      ),
     );
   }
 }
