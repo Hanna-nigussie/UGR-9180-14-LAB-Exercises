@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ScreenOne.dart';
 import 'ScreenTwo.dart';
-import 'course 1.dart';
-import 'course 2.dart';
 
 void main() {
   runApp(MyApp());
